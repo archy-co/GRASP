@@ -18,7 +18,7 @@ public class MailInfo {
 
         templates.put("__name__", client.getName());
         templates.put("__age__", Integer.toString(client.getAge()));
-        templates.put("__sex__", client.getSex());
+        templates.put("__sex__", client.getSex().toString());
 
         for ( String property: templates.keySet() ) {
             mailContent = mailContent.replace( property, templates.get(property) );
